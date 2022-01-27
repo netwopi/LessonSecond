@@ -5,7 +5,7 @@ public class LessonSecond {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         System.out.println("Введите значение что вы хотите сделать :\n1-напечатем какуюто цифру или букву или символ сколько то раз\n" +
-                "увеличение на один\n2-счетчик\n0-выход");
+                "увеличение на один\n2-счетчик\n3-таблица умножения \n0-выход");
         int a = scan.nextInt();
         while (true) {
             if (a == 1) {
@@ -25,8 +25,10 @@ public class LessonSecond {
                 int NumberFirst = scan.nextInt();
                 System.out.println("Второе число");
                 int NumberSecond = scan.nextInt();
-
                 System.out.println(SumOfAllNumbers(NumberFirst ,NumberSecond));
+            }else if (a == 3){
+                Calkaulater();
+                break;
             } else if (a == 0) {
                 break;
             }
@@ -74,6 +76,15 @@ public class LessonSecond {
         int s = 0;
             s = NumberFirst + NumberSecond;
         return s;
+    }
+    public static void Calkaulater(){
+        for(int y = 1 ; y<=10 ; y++){
+            for(int h = 1 ; h <=10 ; h++){
+                System.out.print(y*h+" ");
+            }
+            System.out.println(" ");
+        }
+
     }
 }
 
